@@ -1,0 +1,143 @@
+.card {
+  position: relative;
+  width: 325px;
+  height: 380px;
+  background: #000;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  &:hover {
+    width: 650px;
+    .shoes {
+      transform: rotate(-35deg) translateX(5px);
+    }
+    .details {
+      left: 325px;
+    }
+  }
+  .imgBx {
+    position: relative;
+    min-width: 325px;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 2;
+    .shoes {
+      max-width: 250px;
+      transition: 0.5s ease-in-out;
+    }
+  }
+  .details {
+    position: absolute;
+    left: 0;
+    min-width: 325px;
+    height: 100%;
+    background: #4ba9e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid #fff;
+    }
+
+    h3 {
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.5em;
+      line-height: 1em;
+    }
+
+    span {
+      font-size: 0.65em;
+      font-weight: 300;
+      text-transform: none;
+      opacity: 0.85;
+    }
+
+    h4 {
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 0.9em;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      line-height: 1em;
+    }
+
+    p {
+      color: #fff;
+      opacity: 0.85;
+      font-size: 0.8em;
+    }
+
+    .size {
+      display: flex;
+      gap: 10px;
+      li {
+        list-style: none;
+        color: #fff;
+        font-size: 0.9em;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        opacity: 0.65;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+          color: #4ba9e9;
+          background: #fff;
+          opacity: 1;
+        }
+      }
+    }
+
+    .group {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      h2 {
+        color: #fff;
+        font-weight: 600;
+        font-size: 2em;
+        sup {
+          font-weight: 300;
+        }
+        small {
+          font-size: 0.75em;
+        }
+        a {
+          display: inline-flex;
+          padding: 10px 25px;
+          background: #fff;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: 500;
+          color: #4ba9e9;
+        }
+      }
+    }
+  }
+}
